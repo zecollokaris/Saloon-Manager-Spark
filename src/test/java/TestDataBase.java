@@ -11,8 +11,8 @@ public class TestDataBase extends ExternalResource{
     }
     @Override
     public  void after(){
-        con.createQuery("DELETE FROM stylists *;").executeUpdate();
-        con.createQuery("DELETE FROM clients *;").executeUpdate();
+        con.createQuery("DELETE FROM stylist *;").executeUpdate();
+        con.createQuery("DELETE FROM client *;").executeUpdate();
         con.close();
     }
     public Connection getCon(){
