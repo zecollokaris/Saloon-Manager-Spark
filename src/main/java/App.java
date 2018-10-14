@@ -13,7 +13,14 @@ public class App{
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            model.put("template", "templates/home.vtl" );
+            model.put("stylist",null);
+            if(db.allData().size()>0){
+                model.put("stylist",db.allData());
+            }
+            else{
+                model.put("message","There Are No Stylists! Please Add...");
+            }
+            model.put("template", "templates/index.vtl" );
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
