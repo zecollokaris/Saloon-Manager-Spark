@@ -22,7 +22,7 @@ public class App{
             }
             model.put("template", "templates/index.vtl" );
             return new ModelAndView(model, layout);
-        }, new VelocityTemplateEngine()); 
+        }, new VelocityTemplateEngine());
 
 
     }
