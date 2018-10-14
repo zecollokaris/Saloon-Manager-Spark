@@ -2,8 +2,9 @@
 <div class="alert alert-default">
   <p>$message</p>
 </div>
-
 #end
+
+/
 <div class="stylist">
   <div class="formtainer">
     <form action="/newStylist" method="post">
@@ -12,24 +13,20 @@
           <input type="number" name="id" value="" class="form-control" placeholder="Id Number"  maxlength="8"  required>
         </fieldset>
 
-      <div class="form-group">
-         <input type="number" name="id" value="" class="form-control" placeholder="Id Number"  maxlength="8"  required>
-      </div>
-
           <fieldset>
-            <input type="text" name="fname" value="" class="form-control" placeholder="First Name" required>
+            <input type="text" name="first_name" value="" class="form-control" placeholder="First Name" required>
           </fieldset>
 
           <fieldset>
-            <input type="text" name="mname" value="" class="form-control" placeholder="Middle Name" required>
+            <input type="text" name="second_name" value="" class="form-control" placeholder="=Second Name" required>
           </fieldset>
 
           <fieldset>
-            <input type="text" name="lname" value="" class="form-control" placeholder="Last Name" required>
+            <input type="text" name="last_name" value="" class="form-control" placeholder="Last Name" required>
           </fieldset>
 
           <fieldset>
-            <input type="text" name="phoneno" value="" class="form-control" placeholder="Phone Number" required>
+            <input type="text" name="phone_number" value="" class="form-control" placeholder="Phone Number" required>
           </fieldset>
 
           <fieldset>
@@ -41,11 +38,13 @@
           </fieldset>
     </form>
   </div>
+
+
   <div class="">
     #foreach($stylist in $stylists)
     <div class="well">
-      <h3>$stylist.getFname() $stylist.getMname() $stylist.getLname()</h3>
-      <p><span style="text-transform:uppercase">Phone Number : </span>  $stylist.getPhoneNo()</p>
+      <h3>$stylist.getFirst_name() $stylist.getSecond_name() $stylist.getLast_name()</h3>
+      <p><span style="text-transform:uppercase">Phone Number : </span>  $stylist.getPhone_Number()</p>
       <p><span style="text-transform:uppercase">Email Address : </span>  $stylist.getEmail()</p>
       <p><a href="/getDetails/$stylist.getId()" class="btn btn-info btn-md">Check Details</a></p>
     </div>
