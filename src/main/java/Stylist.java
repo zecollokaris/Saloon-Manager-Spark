@@ -18,6 +18,41 @@ public class Stylist{
         this.phone_number=phone_number;
         this.email=email;
     }
+    public double getId(){
+        return this.id;
+    }
+    public String getFirst_name(){
+        return this.first_name;
+    }
+    public String getSecond_name(){
+        return this.second_name;
+    }
+    public String getLast_name(){
+        return this.last_name;
+    }
+    public String getPhone_number(){
+        return this.phone_number;
+    }
+    public String getEmail(){
+        return this.email;
+    }
 
+    public boolean save(){
+        try{
+            db.getCon().createQuery("INSERT INTO stylist (id,first_name,second_name,last_name,phone_number,email) VALUES(:id,:first_name,:second_name,:last_name,:phonenumber,:email)")
+                    .addParameter("id",id)
+                    .addParameter("first_name",first_name)
+                    .addParameter("second_name",second_name)
+                    .addParameter("last_name",last_name)
+                    .addParameter("phone_number",phone_number)
+                    .addParameter("email",email)
+                    .executeUpdate();
+            return true;
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+            return false;
+        }
+    }
 
 }
