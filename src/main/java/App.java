@@ -26,5 +26,16 @@ public class App{
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        post("addStylist",(resuest,response) ->{
+            Spring id=request.queryParams("id");
+            if (id.length()>8){
+                id=id.substring(0,8);
+            }
+            Stylist stylist=new Stylist(
+                    
+            )
+        });
+
+
     }
 }
