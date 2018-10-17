@@ -17,6 +17,32 @@ public class Client {
         this.email=email;
     }
 
+    public double getId() {
+        return this.id;
+    }
+    public String getFirst_name(){
+        return this.first_name;
+    }
+    public String getSecond_name(){
+        return this.second_name;
+    }
+    public String getLast_name(){
+        return this.last_name;
+    }
+    public String getStylist(){
+        return this.stylist;
+    }
+    public String getPhone_number(){
+        return this.phone_number;
+    }
+    public String getEmail(){
+        return this.email;
+    }
 
+    public boolean save(){
+        try {
+
+        }
+    }
 
 }
