@@ -9,6 +9,14 @@ public class Client {
     private String email;
     private DB db=new DB();
     public Client(double id,String first_name,String second_name, String last_name, String stylist, String phone_number, String email) {
-        
+        this.first_name=first_name;
+        this.second_name=second_name;
+        this.last_name=last_name;
+        this.stylist=stylist;
+        this.phone_number=phone_number;
+        this.email=email;
     }
+
+
+
 }
