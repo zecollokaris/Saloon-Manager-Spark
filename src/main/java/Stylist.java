@@ -9,6 +9,7 @@ public class Stylist{
     private DB db=new DB();
     public Stylist(double id,String first_name,String second_name,String last_name, String phone_number, String email){
 
+
 //      Adding Instances for easy Calling and Usage.
         this.id=id;
         this.first_name=first_name;
@@ -48,5 +49,4 @@ public class Stylist{
     .executeUpdate();
     return  true;
     }
-
 }

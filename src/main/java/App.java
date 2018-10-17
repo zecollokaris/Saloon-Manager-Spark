@@ -37,7 +37,7 @@ public class App{
             model.put("stylist",null);
             if(db.allData().size()>0){
                 model.put("stylist",db.allData());
-            } else{
+            } else {
                 model.put("message","There Are No Stylists! Please Add...");
             }
 
