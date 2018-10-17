@@ -41,8 +41,6 @@ public class Client {
 
     public boolean save(){
         try {
-
-        }
-    }
+            db.getCon().createQuery("INSERT INTO client(first_name,second_name,last_name,stylist,phone_number,email) VALUES(:first_name,:second_name,:last_name,:stylist,:phone_number,:email)")
 
 }
