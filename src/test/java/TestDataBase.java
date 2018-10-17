@@ -1,3 +1,5 @@
+//  This Database contains the database rules!!
+
 import org.junit.rules.ExternalResource;
 import org.sql2o.*;
 
@@ -16,6 +18,7 @@ public class TestDataBase extends ExternalResource{
         con.close();
     }
     public Connection getCon(){
+
         return this.con;
     }
 }
