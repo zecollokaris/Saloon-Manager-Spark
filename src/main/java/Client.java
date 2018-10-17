@@ -42,5 +42,15 @@ public class Client {
     public boolean save(){
         try {
             db.getCon().createQuery("INSERT INTO client(first_name,second_name,last_name,stylist,phone_number,email) VALUES(:first_name,:second_name,:last_name,:stylist,:phone_number,:email)")
+                    .addParameter("first_name",first_name)
+                    .addParameter("second_name",second_name)
+                    .addParameter("last_name",last_name)
+                    .addParameter("stylist",stylist)
+                    .addParameter("phone_number",phone_number)
+                    .addParameter("email",email)
+                    .executeUpdate();
+                    return true;
+        }
+    }
 
 }
