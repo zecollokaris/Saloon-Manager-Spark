@@ -1,5 +1,4 @@
 import org.sql2o.Connection;
-
 public class Stylist{
     private double id;
     private String first_name;
@@ -38,21 +37,16 @@ public class Stylist{
     }
 
     public boolean save(){
-        try{
-            db.getCon().createQuery("INSERT INTO stylist (id,first_name,second_name,last_name,phone_number,email) VALUES(:id,:first_name,:second_name,:last_name,:phonenumber,:email)")
-                    .addParameter("id",id)
-                    .addParameter("first_name",first_name)
-                    .addParameter("second_name",second_name)
-                    .addParameter("last_name",last_name)
-                    .addParameter("phone_number",phone_number)
-                    .addParameter("email",email)
-                    .executeUpdate();
-            return true;
-        }
-        catch(Exception ex){
-            System.out.println(ex.getMessage());
-            return false;
-        }
+
+    db.getCon().createQuery("INSERT INTO stylist (id,first_name,second_name,last_name,phone_number,email) VALUES(:id,:first_name,:second_name,:last_name,:phone_number,:email)")
+    .addParameter("id",id)
+    .addParameter("first_name",first_name)
+    .addParameter("second_name",second_name)
+    .addParameter("last_name",last_name)
+    .addParameter("phone_number",phone_number)
+    .addParameter("email",email)
+    .executeUpdate();
+    return  true;
     }
 
 }

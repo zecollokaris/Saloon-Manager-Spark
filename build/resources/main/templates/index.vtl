@@ -15,7 +15,7 @@
             <input type="text" name="first_name" value="" class="form-control" placeholder="First Name" required>
           </fieldset>
           <fieldset>
-            <input type="text" name="second_name" value="" class="form-control" placeholder="=Second Name" required>
+            <input type="text" name="second_name" value="" class="form-control" placeholder="Second Name" required>
           </fieldset>
           <fieldset>
             <input type="text" name="last_name" value="" class="form-control" placeholder="Last Name" required>
@@ -36,9 +36,9 @@
   <div class="">
     #foreach($stylist in $stylists)
     <div class="well">
-      <h3>$stylist.getFirst_name() $stylist.getSecond_name() $stylist.getLast_name()</h3>
-      <p><span style="text-transform:uppercase">Phone Number : </span>  $stylist.getPhone_Number()</p>
-      <p><span style="text-transform:uppercase">Email Address : </span>  $stylist.getEmail()</p>
+      <h3>$stylist.getfirst_name() $stylist.getsecond_name() $stylist.getlast_name()</h3>
+      <p><span style="text-transform:uppercase">Phone Number : </span>  $stylist.getphone_number()</p>
+      <p><span style="text-transform:uppercase">Email Address : </span>  $stylist.getemail()</p>
       <p><a href="/getDetails/$stylist.getId()" class="btn btn-info btn-md">Check Details</a></p>
     </div>
     #end

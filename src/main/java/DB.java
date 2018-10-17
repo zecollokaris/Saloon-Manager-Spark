@@ -1,4 +1,4 @@
-//import com.sun.security.ntlm.Client;
+
 import org.sql2o.*;
 import java.util.List;
 
@@ -11,15 +11,6 @@ public class DB {
     public Connection getCon(){
         return con;
     }
-    public  String executeCommand(String sql){
-        try{
-            con.createQuery(sql).executeUpdate();
-        }
-        catch (Exception ex) {
-            return "Error Adding..";
-        }
-        return "Added!!! Complete..";
-    }
 
     public List<Stylist> allData(){
         return con.createQuery("SELECT id,first_name,second_name,last_name,phone_number,email FROM stylist").executeAndFetch(Stylist.class);
@@ -30,11 +21,5 @@ public class DB {
         .addParameter("id",id)
         .executeAndFetch(Stylist.class);
     }
-
-//    public List<Client> getClients(double id){
-//        return con.createQuery("SELECT id,first_name,second_name,last_name,stylist,phone_number,email FROM clients")
-//        .addParameter("id",id)
-//        .executeAndFetch(Client.class)
-//    }
 
 }
