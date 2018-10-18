@@ -71,9 +71,9 @@ public class App{
             return new ModelAndView(model,"templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
-        get("/getDetails/:id",(req,res)->{
-            model.put("stylist",db.getStylist(Double.parseDouble(req.params(":id"))));
-            model.put("client",db.getClient(Double.parseDouble(req.params(":id"))));
+        get("/getDetails/:id",(request,response)->{
+            model.put("stylist",db.getStylist(Double.parseDouble(request.params(":id"))));
+            model.put("client",db.getClient(Double.parseDouble(request.params(":id"))));
             model.put("template","templates/stylistdetails.vtl");
             return new ModelAndView(model,"templates/layout.vtl");
         },new VelocityTemplateEngine());
