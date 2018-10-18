@@ -45,7 +45,7 @@ public class App{
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-
+//      Route for viewing Clients!
         get("/clients",(request, response) -> {
             model.put("client",db.getCon().createQuery("SELECT * FROM client;").executeAndFetch(Client.class));
             model.put("template","templates/clients.vtl");
@@ -55,7 +55,7 @@ public class App{
 
 
 
-
+//      Route to Post Clients!
         post("/addclient", (request, response) ->{
             Client client = new Client(
             1,
@@ -70,6 +70,20 @@ public class App{
             response.redirect("/getDetails/"+request.queryParams("stylist"));
             return new ModelAndView(model,"templates/layout.vtl");
         }, new VelocityTemplateEngine());
+
+        get("/getDetails/:id",(req,res)->{
+            model.put("stylist",db.getStylist(Double.parseDouble(req.params(":id"))));
+            model.put("client",db.getClient(Double.parseDouble(req.params(":id"))));
+            model.put("template","templates/stylistdetails.vtl");
+            return new ModelAndView(model,"templates/layout.vtl");
+        },new VelocityTemplateEngine());
+
+
+
+
+
+
+
 
     }
 }
