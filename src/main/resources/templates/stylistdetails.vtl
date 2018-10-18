@@ -1,0 +1,63 @@
+<div class="row">
+    <a href="/" class="btn  btn-info btn">Home</a>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <p><span style="font-weight:bold">Stylist Full Name :</span> $stylist.getFirst_name() $stylist.getSecond_name() $stylist.getLast_name()</p>
+
+    <p><span style="text-transform:uppercase;font-weight:bold">Id Number : </span> $stylist.getId()</p>
+
+    <p><span style="text-transform:uppercase;font-weight:bold">Phone Number : </span>  $stylist.getPhone_number()</p>
+
+    <p><span style="text-transform:uppercase;font-weight:bold">Email Address : </span>  $stylist.getEmail()</p>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <h3>Edit Stylist</h3>
+    <p><a href="/deleteStylist/$stylist.getId()" class="btn btn-danger btn-md"> Delete Stylist</a></p>
+
+    <p>  <a href="/updateStylist/$stylist.getFirst_name()/$stylist.getId()" class="btn btn-info btn-md"> Update Stylist</a></p>
+  </div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-12 col-md-6">
+<h3>Add Client</h3>
+<form action="/addClient" method="post">
+  <div class="form-group">
+     <input type="text" name="First_name" value="" class="form-control" placeholder="First Name" required>
+  </div>
+  <div class="form-group">
+     <input type="text" name="Second_name" value="" class="form-control" placeholder="Middle Name" required>
+  </div>
+  <div class="form-group">
+     <input type="text" name="Last_name" value="" class="form-control" placeholder="Last Name" required>
+  </div>
+  <div class="form-group">
+    <input  list="stylist" name="stylist" class="form-control"/>
+     <datalist id="stylist">
+          <option value="$stylist.getId()">$stylist.getFirst_name() $stylist.getSecond_name() $stylist.getLast_name()</option>
+     </datalist>
+  </div>
+  <div class="form-group">
+     <input type="text" name="phone_number" value="" class="form-control" placeholder="Phone Number" required>
+  </div>
+  <div class="form-group">
+     <input type="email" name="email" value="" class="form-control" placeholder="Email Address" required>
+  </div>
+  <button type="submit" class="btn btn-success btn-md">Add Client</button>
+</form>
+</div>
+<div class="col-sm-12 col-md-6">
+  <h3>Clients</h3>
+  #foreach($client in $clients)
+  <div class="well">
+    <p> <span style="font-weight:bold">Client Full Name :</span> $client.getFirst_name()  $client.getSecond_name() $client.getLast_name()</p>
+    <p><span style="font-weight:bold">Stylist Full Name :</span> $stylist.getFirst_name() $stylist.getSecond_name() $stylist.getLast_name()</p>
+    <p><span style="font-weight:bold">Email :</span> $client.getEmail()</p>
+    <p><span style="font-weight:bold">Phone Number :</span> $client.getPhone_number()</p>
+    <p><a href="/deleteClient/$client.getId()/$stylist.getId()" class="btn btn-danger btn-md"> Delete Client</a></p>
+  </div>
+  #end
+</div>
+</div>
