@@ -46,7 +46,7 @@ public class App{
         }, new VelocityTemplateEngine());
 
 
-        get("/clients",((request, response) -> {
+        get("/clients",(request, response) -> {
             model.put("client",db.getCon().createQuery("SELECT * FROM client;").executeAndFetch(Client.class));
             model.put("template","templates/clients.vtl");
             return new ModelAndView(model, "templates/layout.vtl");
