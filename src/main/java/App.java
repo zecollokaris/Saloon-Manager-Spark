@@ -45,20 +45,29 @@ public class App{
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        post("/addclient", ((request, response) ->{
-            Client client = new Client(
-            1,
-            request.queryParams("first_name"),
-            request.queryParams("second_name"),
-            request.queryParams("last_name"),
-            Double.parseDouble(request.queryParams("stylist")),
-            request.queryParams("phone_number"),
-            request.queryParams("email")
-            );
-            client.save();
-            response.redirect("/getDetails/"+request.queryParams("stylist"));
-            return new ModelAndView(model,"templates/layout.vtl");
+
+        get("/clients",((request, response) -> {
+            model.put("client",db.getCon().createQuery("SELECT * FROM client;").executeAndFetch(Client.class));
+            model.put("template","templates/clients.vtl");
+            return new ModelAndView(model, "templates/layout.vtl");
+
         }, new VelocityTemplateEngine());
+
+
+//        post("/addclient", ((request, response) ->{
+//            Client client = new Client(
+//            1,
+//            request.queryParams("first_name"),
+//            request.queryParams("second_name"),
+//            request.queryParams("last_name"),
+//            Double.parseDouble(request.queryParams("stylist")),
+//            request.queryParams("phone_number"),
+//            request.queryParams("email")
+//            );
+//            client.save();
+//            response.redirect("/getDetails/"+request.queryParams("stylist"));
+//            return new ModelAndView(model,"templates/layout.vtl");
+//        }, new VelocityTemplateEngine());
 
     }
 }
