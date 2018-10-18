@@ -22,4 +22,10 @@ public class DB {
         .executeAndFetch(Stylist.class);
     }
 
+    public List<Client> getClients(double id) {
+        return  con.createQuery("SELECT id, first_name, second_ame,last_name,stylist,phone_number,email FROM client WHERE stylist=:id;")
+        .addParameter("id", id)
+        .executeAndFetch(Client.class);
+    }
+
 }
