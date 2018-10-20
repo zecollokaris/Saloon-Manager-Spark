@@ -57,6 +57,7 @@ public class App{
 
 //      Route to Post Clients!
         post("/addclient", (request, response) ->{
+            try{
             Client client = new Client(
             1,
             request.queryParams("first_name"),
@@ -67,19 +68,35 @@ public class App{
             request.queryParams("email")
             );
             client.save();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
             response.redirect("/getDetails/"+request.queryParams("stylist"));
             return new ModelAndView(model,"templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
-        get("/getDetails/:id",(request,response)->{
-            model.put("stylist",db.getStylist(Double.parseDouble(request.params(":id"))));
-            model.put("client",db.getClient(Double.parseDouble(request.params(":id"))));
-            model.put("template","templates/stylistdetails.vtl");
+
+//      Route to get Details
+        get("/getDetails/:id",(request,response)-> {
+            try{
+            model.put("stylist", db.getStylist(Double.parseDouble(request.params(":id"))));
+//            System.out.println(db.getClient(Double.parseDouble(request.params(":id"))).getFirst_name());
+            model.put("clients", db.getClient(Double.parseDouble(request.params(":id"))));
+            model.put("template", "templates/stylistdetails.vtl");
+            }
+            catch(Exception ex){
+                    System.out.println(ex.getMessage());
+            }
             return new ModelAndView(model,"templates/layout.vtl");
         },new VelocityTemplateEngine());
 
-
-
+//        get("/deletestylist/:stylist",(req,res)->{
+//            String SQL="DELETE FROM  stylist WHERE id="+req.params(":stylist");
+//            db.executeCommand(SQL);
+//            res.redirect("/");
+//            return new ModelAndView(model,"templates/layout.vtl");
+//        },new VelocityTemplateEngine());
 
 
 
