@@ -12,6 +12,16 @@ public class DB {
         return con;
     }
 
+    public  String executeCommand(String sql){
+        try{
+            con.createQuery(sql).executeUpdate();
+        }
+        catch (Exception ex) {
+            return "Error insertion";
+        }
+        return "Complete";
+    }
+
     public List<Stylist> allData(){
         return con.createQuery("SELECT id,first_name,second_name,last_name,phone_number,email FROM stylist").executeAndFetch(Stylist.class);
     }
@@ -34,4 +44,6 @@ public class DB {
                 .addParameter("id", Double.toString(id))
                 .executeAndFetch(Client.class);
     }
+
+
 }

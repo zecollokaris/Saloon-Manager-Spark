@@ -91,12 +91,27 @@ public class App{
             return new ModelAndView(model,"templates/layout.vtl");
         },new VelocityTemplateEngine());
 
-//        get("/deletestylist/:stylist",(req,res)->{
-//            String SQL="DELETE FROM  stylist WHERE id="+req.params(":stylist");
-//            db.executeCommand(SQL);
-//            res.redirect("/");
-//            return new ModelAndView(model,"templates/layout.vtl");
-//        },new VelocityTemplateEngine());
+        get("/deleteClient/:client/:stylist",(request,response)->{
+            String SQL="DELETE FROM  client WHERE id="+request.params(":client");
+            db.executeCommand(SQL);
+            response.redirect("/getDetails/"+request.params(":stylist"));
+            return new ModelAndView(model,"templates/layout.vtl");
+        },new VelocityTemplateEngine());
+
+
+        get("/deleteClient/:client",(req,res)->{
+            String SQL="DELETE FROM  client WHERE id="+req.params(":client");
+            db.executeCommand(SQL);
+            res.redirect("/getClients");
+            return new ModelAndView(model,"templates/layout.vtl");
+        },new VelocityTemplateEngine());
+
+        get("/deleteStylist/:stylist",(req,res)->{
+            String SQL="DELETE FROM  stylist WHERE id="+req.params(":stylist");
+            db.executeCommand(SQL);
+            res.redirect("/");
+            return new ModelAndView(model,"templates/layout.vtl");
+        },new VelocityTemplateEngine());
 
 
 

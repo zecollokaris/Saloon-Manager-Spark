@@ -11,8 +11,7 @@ public class SaloonTest{
 
 
     public boolean InsertClient(){
-        db.getCon().createQuery("INSERT INTO client (id,first_name,second_name,last_name,stylist,phone_number,email) VALUES (:id,:first_name,:second_name,:last_name,:stylist,:phone_number,:email);")
-        .addParameter("id","123456")
+        db.getCon().createQuery("INSERT INTO client (first_name,second_name,last_name,stylist,phone_number,email) VALUES (:id,:first_name,:second_name,:last_name,:stylist,:phone_number,:email);")
         .addParameter("first_name","Collins")
         .addParameter("second_name","Kariuki")
         .addParameter("last_name","Njoroge")
@@ -36,7 +35,7 @@ public class SaloonTest{
     }
 
 
-//    Execution Commands
+//    Execution Test Commands
     @Test
     public void InsertClient_True(){
         assertEquals(true,InsertClient());
@@ -45,7 +44,6 @@ public class SaloonTest{
     public void ensureInsertStylist_True(){
         assertEquals(true,InsertStylist());
     }
-
 
 
 }
