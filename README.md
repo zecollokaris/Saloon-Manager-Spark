@@ -98,3 +98,15 @@ $ psql
 
 ## **SETUP/INSTALLATION!**
 
+**{follow the below instructions for set up.}**
+
+1. You will need Internet connection.
+
+2. You need to get into the Project Repository.
+
+Link:-> ```https://github.com/zecollokaris/Saloon-Manager-Spark```
+
+3. From there you can access the Hero-Squad.
+
+4. **Clone** the project.
+
