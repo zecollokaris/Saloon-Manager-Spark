@@ -136,7 +136,17 @@ gradle run
 
 1. Saloon owner can assign Client to Stylist based on :
 
+- Client First Name
 
+- Client Second Name
+
+- Client Last Name
+
+- Client Stylist (Here the Stylist is assigned)
+
+- Client Phone Number
+
+- Client Email Address
 
 ### TECHNOLOGIES USED:
 
