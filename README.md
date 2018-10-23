@@ -46,4 +46,60 @@ Gradle is used as the build tool and can be installed with sdkman:
 sdk install gradle
 ```
 
+3. Postgresql
 
+Ensure you have installed postgresql on your localmachine
+
+This will be used as the System Database for Hair Saloon.
+
+Once u Have it installed Follow the below Instructions.
+
+
+
+```
+```
+
+# **SETUP/INSTALLATION!**
+
+**{follow the below instructions for set up.}**
+
+1. You will need Internet connection.
+
+2. You need to get into the Hero-Squad Repository.
+
+Link:-> ```https://github.com/zecollokaris/Hero-Squad-Spark```
+
+3. From there you can access the Hero-Squad.
+
+4. **Clone** the project.
+
+5. **get into project folder** (cd into project).
+
+6. If you have all the **Pre-requisites** you can run the application.
+
+```
+gradle run
+```
+### TECHNOLOGIES USED:
+
+- **[Java](https://java.com/en/download/) - source language.**
+
+- **[Gradle](https://gradle.org/) for dependency management and running tasks.**
+
+- Bootstrap.
+
+- Cascading Style Sheets.
+
+- Apache Velocity Engine.
+
+## Support & Contact
+
+- Mobile number: (+254) 798731203
+
+- Email Address: collo.kariss@gmail.com
+
+- github-username: zecollokaris
+
+## License
+
+The app is licensed by MIT. [**HERE**](LICENSE)
