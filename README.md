@@ -23,3 +23,5 @@ This is a simple Hair-Salon management system that stores stylists and clients.T
 - Manager can Contact and information about the Client.
 
 - Manager can delete both Stylist and Client.
+
+## PRE-REQUISITES.
