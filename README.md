@@ -93,7 +93,7 @@ $ psql
 - CREATE Test DataBase
 
 ```
-=# CREATE DATABASE wildlife_tracker_test WITH TEMPLATE saloon_manager_test;
+=# CREATE DATABASE saloon_manager_test WITH TEMPLATE saloon_manager_test;
 ```
 
 ## **SETUP/INSTALLATION!**
@@ -120,36 +120,16 @@ gradle run
 
 ## How It Works
 
-1. Saloon owner can add a Stylist based on :
+1. **Saloon manager can add a Stylist based on :** 
 
-- Stylist Id Number
+Stylist Id Number, Stylist First Name, Stylist Middle Name,Stylist Last Name, Stylist Phone Number, Stylist Email Address
 
-- Stylist First Name
+2. **Saloon owner can assign Client to Stylist based on :** 
 
-- Stylist Middle Name
-
-- Stylist Last Name
-
-- Stylist Phone Number
-
-- Stylist Email Address
-
-2. Saloon owner can assign Client to Stylist based on :
-
-- Client First Name
-
-- Client Second Name
-
-- Client Last Name
-
-- Client Stylist (Here the Stylist is assigned)
-
-- Client Phone Number
-
-- Client Email Address
+Client First Name, Client Second Name, Client Last Name, Client Stylist (Here the Stylist is assigned), Client Phone Number, Client Email Address
 
 
-3. Saloon Owner Can delete both Client and Stylist.
+3. **Saloon Owner Can delete both Client and Stylist.**
 
 
 ### TECHNOLOGIES USED:
