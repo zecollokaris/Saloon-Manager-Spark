@@ -32,6 +32,8 @@ public class App{
         },new VelocityTemplateEngine());
 
 
+
+
 //      Route for home That fetches & displays stylists!
         get("/", (request, response) -> {
             model.put("stylist",null);
@@ -115,6 +117,6 @@ public class App{
             return new ModelAndView(model,"templates/layout.vtl");
         },new VelocityTemplateEngine());
 
-        
+
     }
 }
