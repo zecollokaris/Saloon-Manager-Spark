@@ -1,0 +1,26 @@
+  <a href="/" class="btn btn-primary">Home</a>
+
+  <h3>Clients</h3>
+
+  #if($client.size()<1)
+    <p>Stylist is Free You Can Book In a Client!</p>
+  #end
+
+  <div class="">
+      #foreach($client in $client)
+
+      <div class="clients">
+            <h3> <span style="font-weight:bold">Client Full Name :</span> $client.getFirst_name()  $client.getSecond_name() $client.getLast_name()</h3>
+
+            <p><span style="font-weight:bold">Styist id:</span> $client.getStylist()</p>
+
+            <p><span style="font-weight:bold">Phone Number :</span> $client.getPhone_number()</p>
+
+            <p><span style="font-weight:bold">Email :</span> $client.getEmail()</p>
+
+            <a href="/updateClient/$client.getFirst_name()/$client.getId()" class="btn btn-primary"> Update Client</a>
+
+            <a href="/deleteClient/$client.getId()" class="btn btn-primary"> Delete Client</a>
+      </div>
+      #end
+  </div>

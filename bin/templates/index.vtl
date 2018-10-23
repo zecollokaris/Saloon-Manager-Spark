@@ -1,0 +1,51 @@
+#if($message)
+<div class="alert alert-default">
+  <p>$message</p>
+</div>
+#end
+
+
+<div class="stylist">
+  <div class="formtainer">
+    <form action="/newstylist" method="post">
+        <fieldset>
+          <input type="number" name="id" value="" class="form-control" placeholder="Id Number"  maxlength="8"  required>
+        </fieldset>
+          <fieldset>
+            <input type="text" name="first_name" value="" class="form-control" placeholder="First Name" required>
+          </fieldset>
+          <fieldset>
+            <input type="text" name="second_name" value="" class="form-control" placeholder="Second Name" required>
+          </fieldset>
+          <fieldset>
+            <input type="text" name="last_name" value="" class="form-control" placeholder="Last Name" required>
+          </fieldset>
+          <fieldset>
+            <input type="text" name="phone_number" value="" class="form-control" placeholder="Phone Number" required>
+          </fieldset>
+          <fieldset>
+            <input type="email" name="email" value="" class="form-control" placeholder="Email Address" required>
+          </fieldset>
+          <fieldset>
+            <button style="width: 150px;" name="submit" type="submit" id="submit" data-submit="...Sending">Add Stylist!</button>
+          </fieldset>
+    </form>
+  </div>
+
+
+
+  <div class="">
+    #foreach($stylist in $stylist)
+    <div class="stylists">
+      <h3>$stylist.getFirst_name() $stylist.getSecond_name() $stylist.getLast_name()</h3>
+
+      <p><span>Phone Number : </span>  $stylist.getPhone_number()</p>
+
+      <p><span>Email Address : </span>  $stylist.getEmail()</p>
+
+      <p><a href="/getDetails/$stylist.getId()" class="btn btn-info btn-md">Check Details</a></p>
+    </div>
+    #end
+  </div>
+
+</div>

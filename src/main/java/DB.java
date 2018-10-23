@@ -45,5 +45,4 @@ public class DB {
                 .executeAndFetch(Client.class);
     }
 
-
 }

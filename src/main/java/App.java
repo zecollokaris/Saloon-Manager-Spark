@@ -91,6 +91,8 @@ public class App{
             return new ModelAndView(model,"templates/layout.vtl");
         },new VelocityTemplateEngine());
 
+
+
         get("/deleteClient/:client/:stylist",(request,response)->{
             String SQL="DELETE FROM  client WHERE id="+request.params(":client");
             db.executeCommand(SQL);
@@ -113,9 +115,6 @@ public class App{
             return new ModelAndView(model,"templates/layout.vtl");
         },new VelocityTemplateEngine());
 
-
-
-
-
+        
     }
 }
