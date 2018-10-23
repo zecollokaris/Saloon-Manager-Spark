@@ -56,11 +56,18 @@ Once u Have it installed Follow the below Instructions.
 
 - Open your bash terminal
 
-Initialize postgresql Database using the below commands
+NOTE!
+
+The ``` $ ``` and ``` =# ``` are only used to indicate the current location!... DO NOT TYPE THEM!
+
+- Initialize postgresql Database using the below commands.
 
 ```
-psql
+$ psql
 ```
+
+- Create DataBase
+
 
 # **SETUP/INSTALLATION!**
 
