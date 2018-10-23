@@ -151,6 +151,7 @@ gradle run
 
 3. Saloon Owner Can delete both Client and Stylist.
 
+
 ### TECHNOLOGIES USED:
 
 - **[Java](https://java.com/en/download/) - source language.**
