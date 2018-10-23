@@ -72,12 +72,6 @@ $ psql
 =# CREATE DATABASE saloon_manager;
 ```
 
-- CREATE Test DataBase
-
-```
-=# CREATE DATABASE wildlife_tracker_test WITH TEMPLATE saloon_manager_test;
-```
-
 - Connect to DataBase
 
 ```
@@ -93,10 +87,14 @@ $ psql
 - Create Client Table
 
 ```
-CREATE TABLE client (id SERAIL PRIMARY KEY,first_name VARCHAR,mname VARCHAR,lname VARCHAR,stylist VARCHAR,phoneno VARCHAR, email VARCHAR);
-
+=# CREATE TABLE client (id SERAIL PRIMARY KEY,first_name VARCHAR,second_name VARCHAR,last_name VARCHAR,stylist VARCHAR,phone_number VARCHAR, email VARCHAR);
 ```
 
+- CREATE Test DataBase
+
+```
+=# CREATE DATABASE wildlife_tracker_test WITH TEMPLATE saloon_manager_test;
+```
 
 # **SETUP/INSTALLATION!**
 
