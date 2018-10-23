@@ -54,9 +54,12 @@ This will be used as the System Database for Hair Saloon.
 
 Once u Have it installed Follow the below Instructions.
 
+- Open your bash terminal
 
+Initialize postgresql Database using the below commands
 
 ```
+psql
 ```
 
 # **SETUP/INSTALLATION!**
