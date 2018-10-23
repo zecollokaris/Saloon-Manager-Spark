@@ -80,9 +80,15 @@ $ psql
 
 - Connect to DataBase
 
-\c saloon_test
+```
+=# \c saloon_test
+```
 
 - Create Tables
+
+```
+=# CREATE TABLE stylists (id INT PRIMARY KEY,first_name VARCHAR,second_name VARCHAR,last_name VARCHAR, phone_number VARCHAR, email VARCHAR);
+```
 
 # **SETUP/INSTALLATION!**
 
