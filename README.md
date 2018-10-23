@@ -118,3 +118,42 @@ Link:-> ```https://github.com/zecollokaris/Saloon-Manager-Spark```
 gradle run
 ```
 
+## How It Works
+
+1. Saloon owner can add a stylist based on :
+
+- Stylist Id Number
+
+- Stylist First Name
+
+- Stylist Middle Name
+
+- Stylist Last Name
+
+- Stylist Phone Number
+
+- Stylist Email Address
+
+### TECHNOLOGIES USED:
+
+- **[Java](https://java.com/en/download/) - source language.**
+
+- **[Gradle](https://gradle.org/) for dependency management and running tasks.**
+
+- Bootstrap.
+
+- Cascading Style Sheets.
+
+- Apache Velocity Engine.
+
+## Support & Contact
+
+- Mobile number: (+254) 798731203
+
+- Email Address: collo.kariss@gmail.com
+
+- github-username: zecollokaris
+
+## License
+
+The app is licensed by MIT. [**HERE**](LICENSE)
