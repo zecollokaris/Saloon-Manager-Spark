@@ -134,7 +134,7 @@ gradle run
 
 - Stylist Email Address
 
-1. Saloon owner can assign Client to Stylist based on :
+2. Saloon owner can assign Client to Stylist based on :
 
 - Client First Name
 
@@ -147,6 +147,9 @@ gradle run
 - Client Phone Number
 
 - Client Email Address
+
+
+3. Saloon Owner Can delete both Client and Stylist.
 
 ### TECHNOLOGIES USED:
 
