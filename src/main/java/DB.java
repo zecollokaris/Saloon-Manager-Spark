@@ -5,7 +5,7 @@ import java.util.List;
 public class DB {
     private Connection con;
     public DB(){
-        con=new Sql2o("jdbc:postgresql://localhost:5432/saloon_manager","karis","Kar!s123").open();
+        con=new Sql2o("jdbc:postgresql://ec2-54-243-61-194.compute-1.amazonaws.com:5432/d9i14o321comr7","tvyqktjmvjzglo","aeba17f4fa1782f78bdcdb9c28c2e22e677eb5c7e22d883e912199a60b67ef9f").open();
     }
 
     public Connection getCon(){
