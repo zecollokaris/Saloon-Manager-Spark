@@ -68,6 +68,21 @@ $ psql
 
 - Create DataBase
 
+```
+=# CREATE DATABASE saloon_manager;
+```
+
+- CREATE Test DataBase
+
+```
+=# CREATE DATABASE wildlife_tracker_test WITH TEMPLATE saloon_manager_test;
+```
+
+- Connect to DataBase
+
+\c saloon_test
+
+- Create Tables
 
 # **SETUP/INSTALLATION!**
 
