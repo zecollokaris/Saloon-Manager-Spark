@@ -118,20 +118,6 @@ Link:-> ```https://github.com/zecollokaris/Saloon-Manager-Spark```
 gradle run
 ```
 
-## How It Works
-
-1. **Saloon manager can add a Stylist based on :** 
-
-Stylist Id Number, Stylist First Name, Stylist Middle Name,Stylist Last Name, Stylist Phone Number, Stylist Email Address
-
-2. **Saloon owner can assign Client to Stylist based on :** 
-
-Client First Name, Client Second Name, Client Last Name, Client Stylist (Here the Stylist is assigned), Client Phone Number, Client Email Address
-
-
-3. **Saloon Owner Can delete both Client and Stylist.**
-
-
 ### TECHNOLOGIES USED:
 
 - **[Java](https://java.com/en/download/) - source language.**
