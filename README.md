@@ -84,11 +84,19 @@ $ psql
 =# \c saloon_test
 ```
 
-- Create Tables
+- Create Stylist Table
 
 ```
-=# CREATE TABLE stylists (id INT PRIMARY KEY,first_name VARCHAR,second_name VARCHAR,last_name VARCHAR, phone_number VARCHAR, email VARCHAR);
+=# CREATE TABLE stylist (id INT PRIMARY KEY,first_name VARCHAR,second_name VARCHAR,last_name VARCHAR, phone_number VARCHAR, email VARCHAR);
 ```
+
+- Create Client Table
+
+```
+CREATE TABLE client (id SERAIL PRIMARY KEY,first_name VARCHAR,mname VARCHAR,lname VARCHAR,stylist VARCHAR,phoneno VARCHAR, email VARCHAR);
+
+```
+
 
 # **SETUP/INSTALLATION!**
 
