@@ -1,0 +1,1 @@
+web: ./build/install/Saloon-Manager/bin/Saloon-Manager
