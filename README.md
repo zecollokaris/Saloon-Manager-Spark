@@ -120,7 +120,7 @@ gradle run
 
 ## How It Works
 
-1. Saloon owner can add a stylist based on :
+1. Saloon owner can add a Stylist based on :
 
 - Stylist Id Number
 
@@ -133,6 +133,10 @@ gradle run
 - Stylist Phone Number
 
 - Stylist Email Address
+
+1. Saloon owner can assign Client to Stylist based on :
+
+
 
 ### TECHNOLOGIES USED:
 
